@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pomodoro Timer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="sidebar">
+        <h2>Choose Background:</h2>
+        <div class="background-options">
+            <img src="background1.jpg" alt="Background 1" onclick="changeBackground('background1.jpg')">
+            <img src="background2.jpg" alt="Background 2" onclick="changeBackground('background2.jpg')">
+            <img src="background3.jpg" alt="Background 3" onclick="changeBackground('background3.jpg')">
+            <img src="background4.jpg" alt="Background 4" onclick="changeBackground('background4.jpg')">
+        </div>
+    </div>
+
+    <div class="timer-container">
+        <div class="timer">
+            <h1 id="timer">25:00</h1>
+            <button id="startButton">Start</button>
+            <button id="pauseButton">Pause</button>
+            <button id="resetButton">Reset</button>
+        </div>
+    </div>
+</div>
+
+    <script src="timer.js"></script>
+</body>
+</html>
