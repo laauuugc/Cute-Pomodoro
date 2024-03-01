@@ -83,7 +83,7 @@ button:hover {
 
 #settings h2 {
     margin-bottom: 10px;
-    font-size: 24px;
+    font-size: 20px;
     color: #333; /* Dark text color */
 }
 
@@ -104,19 +104,19 @@ button:hover {
 }
 
 .rain-sounds {
-    margin-top: 20px;
-    padding-top: 20px;
+    margin-top: 10px;
+    padding-top: 5px;
     border-top: 1px solid #ccc; /* Add separator line */
 }
 
 .rain-sounds h2 {
-    font-size: 24px;
+    font-size: 20px;
     color: #333; /* Dark text color */
     margin-bottom: 10px;
 }
 
 .rain-sounds label {
-    font-size: 16px;
+    font-size: 14px;
     color: #333; /* Dark text color */
 }
 
