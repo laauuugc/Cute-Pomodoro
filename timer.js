@@ -53,7 +53,32 @@ function changeBackground(imageUrl) {
     document.body.style.backgroundImage = `url(${imageUrl})`;
 }
 
-// Rest of your timer functionality remains the same
+// Variable to keep track of rain sounds state
+let isRainSoundsEnabled = false;
+const rainSound = document.getElementById('rainSound');
+// Function to toggle rain sounds
+function toggleRainSounds() {
+    const rainSoundsToggle = document.getElementById('rainSoundsToggle');
+    isRainSoundsEnabled = rainSoundsToggle.checked;
+    if (isRainSoundsEnabled) {
+        startRainSounds();
+    } else {
+        stopRainSounds();   
+    }
+}
+// Function to start playing rain sounds
+function startRainSounds() {
+    rainSound.play();
+}
+
+// Function to stop playing rain sounds
+function stopRainSounds() {
+    rainSound.pause();
+    rainSound.currentTime = 0; // Reset audio to the beginning
+}
+
+// Add event listener to rain sounds toggle switch
+document.getElementById('rainSoundsToggle').addEventListener('change', toggleRainSounds);
 
 
 // Event listeners for buttons

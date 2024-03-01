@@ -102,3 +102,21 @@ button:hover {
     border-radius: 5px;
     background-color: #f9f9f9; /* Light gray background */
 }
+
+.rain-sounds {
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 1px solid #ccc; /* Add separator line */
+}
+
+.rain-sounds h2 {
+    font-size: 24px;
+    color: #333; /* Dark text color */
+    margin-bottom: 10px;
+}
+
+.rain-sounds label {
+    font-size: 16px;
+    color: #333; /* Dark text color */
+}
+
