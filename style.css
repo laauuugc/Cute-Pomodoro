@@ -69,12 +69,16 @@ button:hover {
 }
 
 /* Add these styles for the settings section */
-#settings {
-    margin-top: 20px;
-    background-color: #f5d8c5; /* White background */
+.settings {
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 100px;
+    background-color: #f5d8c5; /* Soft background color */
     padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow */
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1); /* Soft shadow */
+    overflow-y: auto; /* Enable vertical scrolling */
 }
 
 #settings h2 {
