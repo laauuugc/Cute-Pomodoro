@@ -15,7 +15,7 @@ body {
     left: 0;
     height: 100%;
     width: 200px;
-    background-color: #f3f3f3; /* Soft background color */
+    background-color: #f5d8c5; /* Soft background color */
     padding: 20px;
     box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1); /* Soft shadow */
     overflow-y: auto; /* Enable vertical scrolling */
@@ -39,7 +39,7 @@ body {
 
 .timer {
     text-align: center;
-    background-color: #fff; /* White background for the timer container */
+    background-color: #f5d8c5; /* White background for the timer container */
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow */
@@ -55,10 +55,12 @@ button {
     border-radius: 5px;
     color: #fff; /* White text color */
     transition: background-color 0.3s ease; /* Smooth transition */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow */
 }
 
 button:hover {
     background-color: #5ca7ba; /* Darker blue on hover */
+    transform: translateY(-2px); /* Move button slightly up on hover */
 }
 
 #timer {
@@ -66,3 +68,33 @@ button:hover {
     color: #333; /* Dark text color */
 }
 
+/* Add these styles for the settings section */
+#settings {
+    margin-top: 20px;
+    background-color: #f5d8c5; /* White background */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow */
+}
+
+#settings h2 {
+    margin-bottom: 10px;
+    font-size: 24px;
+    color: #333; /* Dark text color */
+}
+
+#settings label {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 16px;
+    color: #333; /* Dark text color */
+}
+
+#settings select {
+    width: 100%;
+    padding: 8px;
+    font-size: 16px;
+    border: 1px solid #ccc; /* Light gray border */
+    border-radius: 5px;
+    background-color: #f9f9f9; /* Light gray background */
+}

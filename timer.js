@@ -17,7 +17,10 @@ function pauseTimer() {
 function resetTimer() {
     clearInterval(timer);
     isRunning = false;
-    timeLeft = 25 * 60; // Reset to 25 minutes
+    // Set the time based on selected options
+    const studyTimeSelect = document.getElementById('studyTime');
+    const breakTimeSelect = document.getElementById('breakTime');
+    timeLeft = parseInt(studyTimeSelect.value) * 60;
     updateTimerDisplay();
 }
 
