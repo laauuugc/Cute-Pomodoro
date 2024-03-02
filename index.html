@@ -5,11 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pomodoro Timer</title>
     <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Patrick+Hand|Pacifico&display=swap" rel="stylesheet">
 </head>
 <body>
     <div class="sidebar">
+        <div class="menu-toggle" onclick="toggleMenu()">
+            <div class="hamburger"></div>
+        </div>
         <h2>Choose Background</h2>
-        <div class="background-options">
+        <div class="background-options" id="backgroundOptions">
             <img src="background1.jpg" alt="Background 1" onclick="changeBackground('background1.jpg')">
             <img src="background2.jpg" alt="Background 2" onclick="changeBackground('background2.jpg')">
             <img src="background3.jpg" alt="Background 3" onclick="changeBackground('background3.jpg')">
@@ -44,9 +48,15 @@
                 <h2>Sounds:</h2>
                 <label>
                     <input type="checkbox" id="rainSoundsToggle">
-                    Rain sounds
+                    Rain
                 </label>
             </div>
+            <div class="writing-sounds">
+                <label>
+                    <input type="checkbox" id="writingSoundsToggle">
+                    Writing
+                </label>
+            </div>            
             <div class="sticky-note">
                 <h2>To-Do List:</h2>
                 <input type="text" id="todoItem" placeholder="Add a task">
@@ -56,6 +66,7 @@
         </div>
     </div>
 
+    <audio id="writingSound" src="writing.mp3"></audio>
     <audio id="rainSound" src="rain.mp3" loop></audio>
     <script src="timer.js"></script>
 </body>

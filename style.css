@@ -1,5 +1,5 @@
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Patrick Hand', cursive;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -118,6 +118,12 @@ button:hover {
 .rain-sounds label {
     font-size: 14px;
     color: #333; /* Dark text color */
+    padding: 11px;
+}
+.writing-sounds label {
+    font-size: 14px;
+    color: #333; /* Dark text color */
+    padding: 11px;
 }
 
 .sticky-note {
@@ -180,4 +186,24 @@ button:hover {
 
 #todoList li:hover .bin-icon {
     display: inline-block; /* Show bin icon on hover */
+}
+
+.menu-toggle {
+    cursor: pointer;
+    padding: 10px;
+}
+
+.hamburger {
+    width: 25px;
+    height: 3px;
+    background-color: #333;
+    margin: 5px 0;
+}
+
+.background-options {
+    display: none;
+}
+
+.show-menu .background-options {
+    display: block;
 }

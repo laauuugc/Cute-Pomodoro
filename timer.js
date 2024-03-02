@@ -44,7 +44,7 @@ function updateTimerDisplay() {
 
 function playAlarm() {
     // Create an audio element and play the alarm sound
-    const audio = new Audio('alarm.mp3'); // Replace 'alarm.mp3' with your alarm sound file
+    const audio = new Audio('alarm.mp3');
     audio.play();
 }
 
@@ -76,8 +76,6 @@ function stopRainSounds() {
     rainSound.pause();
     rainSound.currentTime = 0; // Reset audio to the beginning
 }
-
-// Existing code remains the same
 
 // Function to add a to-do item to the sticky note
 function addTodoItem() {
@@ -127,12 +125,45 @@ function addTodoItem() {
     }
 }
 
+// Variable to keep track of writing sounds state
+let isWritingSoundsEnabled = false;
+const writingSound = document.getElementById('writingSound');
+
+// Function to toggle writing sounds
+function toggleWritingSounds() {
+    const writingSoundsToggle = document.getElementById('writingSoundsToggle');
+    isWritingSoundsEnabled = writingSoundsToggle.checked;
+    if (isWritingSoundsEnabled) {
+        startWritingSounds();
+    } else {
+        stopWritingSounds();   
+    }
+}
+
+// Function to start playing writing sounds
+function startWritingSounds() {
+    writingSound.play();
+}
+
+// Function to stop playing writing sounds
+function stopWritingSounds() {
+    writingSound.pause();
+    writingSound.currentTime = 0; // Reset audio to the beginning
+}
+
+function toggleMenu() {
+    const sidebar = document.querySelector('.sidebar');
+    sidebar.classList.toggle('show-menu');
+}
+
 // Add event listener to add todo button
 document.getElementById('addTodoButton').addEventListener('click', addTodoItem);
 
 
 // Add event listener to rain sounds toggle switch
 document.getElementById('rainSoundsToggle').addEventListener('change', toggleRainSounds);
+// Add event listener to writing sounds toggle switch
+document.getElementById('writingSoundsToggle').addEventListener('change', toggleWritingSounds);
 
 
 // Event listeners for buttons
