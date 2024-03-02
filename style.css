@@ -5,7 +5,7 @@ body {
     align-items: center;
     height: 100vh;
     margin: 0;
-    background-size: 160vh;
+    background-size: 176vh;
     background-position: right top; /* Align the background image to the right */
 }
 
@@ -14,7 +14,8 @@ body {
     top: 0;
     left: 0;
     height: 100%;
-    width: 200px;
+    width: 100px;
+    font-size: 13px;
     background-color: #f5d8c5; /* Soft background color */
     padding: 20px;
     box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1); /* Soft shadow */
@@ -34,7 +35,7 @@ body {
 }
 
 .timer-container {
-    margin-left: 220px; /* Adjust to accommodate sidebar width */
+    margin-left: 200px; /* Adjust to accommodate sidebar width */
 }
 
 .timer {
@@ -68,7 +69,6 @@ button:hover {
     color: #333; /* Dark text color */
 }
 
-/* Add these styles for the settings section */
 .settings {
     position: fixed;
     top: 0;
@@ -120,3 +120,64 @@ button:hover {
     color: #333; /* Dark text color */
 }
 
+.sticky-note {
+    margin-top: 10px;
+    padding-top: 5px;
+    border-top: 1px solid #ccc;
+}
+
+.sticky-note h2 {
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+#todoItem {
+    width: calc(100% - 10px);
+    margin-bottom: 5px;
+    padding: 8px;
+    font-size: 16px;
+}
+
+#addTodoButton {
+    width: calc(100% - 10px);
+    padding: 8px 10px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #7ebdce;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    transition: background-color 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#addTodoButton:hover {
+    background-color: #5ca7ba;
+    transform: translateY(-2px);
+}
+
+#todoList {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+#todoList li {
+    margin-bottom: 5px;
+}
+
+#todoList li:hover {
+    background-color: #cceeff; /* Light blue background color on hover */
+    cursor: pointer;
+}
+
+.bin-icon {
+    display: none; /* Initially hidden */
+    margin-left: 10px; /* Add margin for spacing */
+    font-size: 10px;
+}
+
+#todoList li:hover .bin-icon {
+    display: inline-block; /* Show bin icon on hover */
+}

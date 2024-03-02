@@ -77,6 +77,47 @@ function stopRainSounds() {
     rainSound.currentTime = 0; // Reset audio to the beginning
 }
 
+// Existing code remains the same
+
+// Function to add a to-do item to the sticky note
+function addTodoItem() {
+    const todoInput = document.getElementById('todoItem');
+    const todoText = todoInput.value.trim();
+
+    if (todoText !== '') {
+        const todoList = document.getElementById('todoList');
+        const listItem = document.createElement('li');
+        listItem.textContent = "- " + todoText;
+
+        // Create a bin icon
+        const binIcon = document.createElement('span');
+        binIcon.classList.add('bin-icon');
+        binIcon.innerHTML = '&#128465;'; // Unicode for trash can icon
+        binIcon.addEventListener('click', () => {
+            // Remove the task when clicked
+            listItem.remove();
+        });
+
+        // Append bin icon to the list item
+        listItem.appendChild(binIcon);
+
+        listItem.addEventListener('mouseenter', () => {
+            listItem.style.backgroundColor = '#cceeff'; // Change background color on hover
+        });
+
+        listItem.addEventListener('mouseleave', () => {
+            listItem.style.backgroundColor = ''; // Reset background color on mouse leave
+        });
+        
+        todoList.appendChild(listItem);
+        todoInput.value = ''; // Clear input field after adding item
+    }
+}
+
+// Add event listener to add todo button
+document.getElementById('addTodoButton').addEventListener('click', addTodoItem);
+
+
 // Add event listener to rain sounds toggle switch
 document.getElementById('rainSoundsToggle').addEventListener('change', toggleRainSounds);
 

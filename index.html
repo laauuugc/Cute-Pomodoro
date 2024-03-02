@@ -8,7 +8,7 @@
 </head>
 <body>
     <div class="sidebar">
-        <h2>Choose Background:</h2>
+        <h2>Choose Background</h2>
         <div class="background-options">
             <img src="background1.jpg" alt="Background 1" onclick="changeBackground('background1.jpg')">
             <img src="background2.jpg" alt="Background 2" onclick="changeBackground('background2.jpg')">
@@ -46,6 +46,12 @@
                     <input type="checkbox" id="rainSoundsToggle">
                     Rain sounds
                 </label>
+            </div>
+            <div class="sticky-note">
+                <h2>To-Do List:</h2>
+                <input type="text" id="todoItem" placeholder="Add a task">
+                <button id="addTodoButton">Add</button>
+                <ul id="todoList"></ul>
             </div>
         </div>
     </div>
