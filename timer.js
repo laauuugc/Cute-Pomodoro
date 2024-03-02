@@ -82,12 +82,23 @@ function stopRainSounds() {
 // Function to add a to-do item to the sticky note
 function addTodoItem() {
     const todoInput = document.getElementById('todoItem');
-    const todoText = todoInput.value.trim();
+    const todoText = todoInput.value.trim(); //correct variable name
 
     if (todoText !== '') {
         const todoList = document.getElementById('todoList');
         const listItem = document.createElement('li');
-        listItem.textContent = "- " + todoText;
+        
+        // Create checkbox
+        const checkbox = document.createElement('input');
+        checkbox.type = 'checkbox';
+        checkbox.addEventListener('change', () => {
+            // Toggle strike-through text decoration on checkbox change
+            listItem.style.textDecoration = checkbox.checked ? 'line-through' : 'none';
+        });
+
+        // Create span for task text
+        const taskSpan = document.createElement('span');
+        taskSpan.textContent = todoText;
 
         // Create a bin icon
         const binIcon = document.createElement('span');
@@ -98,6 +109,8 @@ function addTodoItem() {
             listItem.remove();
         });
 
+        listItem.appendChild(checkbox); // Append checkbox
+        listItem.appendChild(taskSpan); // Append task text
         // Append bin icon to the list item
         listItem.appendChild(binIcon);
 
