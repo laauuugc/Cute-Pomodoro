@@ -154,6 +154,9 @@ function stopWritingSounds() {
 function toggleMenu() {
     const sidebar = document.querySelector('.sidebar');
     sidebar.classList.toggle('show-menu');
+
+    const menuToggle = document.querySelector('.menu-toggle');
+    menuToggle.classList.toggle('show-menu');
 }
 
 // Add event listener to add todo button

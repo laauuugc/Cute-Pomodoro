@@ -5,7 +5,7 @@ body {
     align-items: center;
     height: 100vh;
     margin: 0;
-    background-size: 176vh;
+    background-size: 200vh;
     background-position: right top; /* Align the background image to the right */
 }
 
@@ -16,15 +16,14 @@ body {
     height: 100%;
     width: 100px;
     font-size: 13px;
-    background-color: #f5d8c5; /* Soft background color */
+    background-color: transparent; /* Soft background color */
     padding: 20px;
-    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1); /* Soft shadow */
     overflow-y: auto; /* Enable vertical scrolling */
     transition: background-color 0.3s ease;
 }
 
 .sidebar.show-menu {
-    background-color: #d99174; /* Change background color when menu is shown */
+    background-color: #f5d8c5; /* Change background color when menu is shown */
 }
 
 .background-options {
@@ -196,6 +195,7 @@ button:hover {
 .menu-toggle {
     cursor: pointer;
     padding: 10px;
+    background-color: transparent;
 }
 
 .hamburger {
