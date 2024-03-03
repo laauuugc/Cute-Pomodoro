@@ -5,8 +5,9 @@ body {
     align-items: center;
     height: 100vh;
     margin: 0;
-    background-size: 200vh;
-    background-position: right top; /* Align the background image to the right */
+    background-color: #dcefde; /* Default pastel color */
+    background-size: cover;
+    background-position: center; /* Align the background image to the right */
 }
 
 .sidebar {
@@ -39,7 +40,10 @@ body {
 }
 
 .timer-container {
-    margin-left: 200px; /* Adjust to accommodate sidebar width */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
 }
 
 .timer {

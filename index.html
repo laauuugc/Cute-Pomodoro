@@ -51,12 +51,20 @@
                     Rain
                 </label>
             </div>
+            <div class="volume-control">
+                <label for="rainVolume"></label>
+                <input type="range" id="rainVolume" min="0" max="1" step="0.1" value="1" onchange="adjustRainVolume(this.value)">
+            </div>
             <div class="writing-sounds">
                 <label>
                     <input type="checkbox" id="writingSoundsToggle">
                     Writing
                 </label>
-            </div>            
+            </div>
+            <div class="volume-control">
+                <label for="writingVolume"></label>
+                <input type="range" id="writingVolume" min="0" max="1" step="0.1" value="1" onchange="adjustWritingVolume(this.value)">
+            </div>                        
             <div class="sticky-note">
                 <h2>To-Do List:</h2>
                 <input type="text" id="todoItem" placeholder="Add a task">

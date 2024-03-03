@@ -159,6 +159,15 @@ function toggleMenu() {
     menuToggle.classList.toggle('show-menu');
 }
 
+function adjustRainVolume(volume) {
+    rainSound.volume = volume;
+}
+
+function adjustWritingVolume(volume) {
+    writingSound.volume = volume;
+}
+
+
 // Add event listener to add todo button
 document.getElementById('addTodoButton').addEventListener('click', addTodoItem);
 
