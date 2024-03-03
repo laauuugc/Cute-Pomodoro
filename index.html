@@ -60,6 +60,7 @@
                 <label for="rainVolume"></label>
                 <input type="range" id="rainVolume" min="0" max="1" step="0.1" value="1" onchange="adjustRainVolume(this.value)">
             </div>
+
             <div class="writing-sounds">
                 <label>
                     <input type="checkbox" id="writingSoundsToggle">
@@ -69,7 +70,30 @@
             <div class="volume-control">
                 <label for="writingVolume"></label>
                 <input type="range" id="writingVolume" min="0" max="1" step="0.1" value="1" onchange="adjustWritingVolume(this.value)">
-            </div>                        
+            </div>
+
+            <div class="fireplace-sounds">
+                <label>
+                    <input type="checkbox" id="fireplaceSoundsToggle">
+                    Fireplace
+                </label>
+            </div>
+            <div class="volume-control">
+                <label for="fireplaceVolume"></label>
+                <input type="range" id="fireplaceVolume" min="0" max="1" step="0.1" value="1" onchange="adjustFireplaceVolume(this.value)">
+            </div>    
+                    
+            <div class="birds-sounds">
+                <label>
+                    <input type="checkbox" id="birdsSoundsToggle">
+                    Birds
+                </label>
+            </div>
+            <div class="volume-control">
+                <label for="birdsVolume"></label>
+                <input type="range" id="birdsVolume" min="0" max="1" step="0.1" value="1" onchange="adjustBirdsVolume(this.value)">
+            </div> 
+
             <div class="sticky-note">
                 <h2>To-Do List:</h2>
                 <input type="text" id="todoItem" placeholder="Add a task">
@@ -79,6 +103,8 @@
         </div>
     </div>
 
+    <audio id="birdsSound" src="birds.mp3"></audio>
+    <audio id="fireplaceSound" src="fireplace.mp3"></audio>
     <audio id="writingSound" src="writing.mp3"></audio>
     <audio id="rainSound" src="rain.mp3" loop></audio>
     <script src="timer.js"></script>

@@ -151,6 +151,58 @@ function stopWritingSounds() {
     writingSound.currentTime = 0; // Reset audio to the beginning
 }
 
+// Variable to keep track of fireplace sounds state
+let isFireplaceSoundsEnabled = false;
+const fireplaceSound = document.getElementById('fireplaceSound');
+
+// Function to toggle writing sounds
+function toggleFireplaceSounds() {
+    const fireplaceSoundsToggle = document.getElementById('fireplaceSoundsToggle');
+    isFireplaceSoundsEnabled = fireplaceSoundsToggle.checked;
+    if (isFireplaceSoundsEnabled) {
+        startFireplaceSounds();
+    } else {
+        stopFireplaceSounds();   
+    }
+}
+
+// Function to start playing writing sounds
+function startFireplaceSounds() {
+    fireplaceSound.play();
+}
+
+// Function to stop playing writing sounds
+function stopFireplaceSounds() {
+    fireplaceSound.pause();
+    fireplaceSound.currentTime = 0; // Reset audio to the beginning
+}
+
+// Variable to keep track of fireplace sounds state
+let isBirdsSoundsEnabled = false;
+const birdsSound = document.getElementById('birdsSound');
+
+// Function to toggle writing sounds
+function toggleBirdsSounds() {
+    const birdsSoundsToggle = document.getElementById('birdsSoundsToggle');
+    isBirdsSoundsEnabled = birdsSoundsToggle.checked;
+    if (isBirdsSoundsEnabled) {
+        startBirdsSounds();
+    } else {
+        stopBirdsSounds();   
+    }
+}
+
+// Function to start playing writing sounds
+function startBirdsSounds() {
+    birdsSound.play();
+}
+
+// Function to stop playing writing sounds
+function stopBirdsSounds() {
+    birdsSound.pause();
+    birdsSound.currentTime = 0; // Reset audio to the beginning
+}
+
 function toggleMenu() {
     const sidebar = document.querySelector('.sidebar');
     sidebar.classList.toggle('show-menu');
@@ -171,7 +223,10 @@ function adjustWritingVolume(volume) {
 // Add event listener to add todo button
 document.getElementById('addTodoButton').addEventListener('click', addTodoItem);
 
-
+// Add event listener to birds sounds toggle switch
+document.getElementById('birdsSoundsToggle').addEventListener('change', toggleBirdsSounds);
+// Add event listener to fireplace sounds toggle switch
+document.getElementById('fireplaceSoundsToggle').addEventListener('change', toggleFireplaceSounds);
 // Add event listener to rain sounds toggle switch
 document.getElementById('rainSoundsToggle').addEventListener('change', toggleRainSounds);
 // Add event listener to writing sounds toggle switch

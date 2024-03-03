@@ -135,6 +135,18 @@ button:hover {
     padding: 11px;
 }
 
+.fireplace-sounds label {
+    font-size: 14px;
+    color: #333; /* Dark text color */
+    padding: 11px;
+}
+
+.birds-sounds label {
+    font-size: 14px;
+    color: #333; /* Dark text color */
+    padding: 11px;
+}
+
 .sticky-note {
     margin-top: 10px;
     padding-top: 5px;
