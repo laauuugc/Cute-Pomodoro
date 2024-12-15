@@ -64,7 +64,6 @@ function togglePeriod() {
     updateTimerDisplay();
     startTimer();
 }
-
 // Function to change background image
 function changeBackground(imageUrl) {
     document.body.style.backgroundImage = `url(${imageUrl})`;
@@ -254,6 +253,7 @@ document.getElementById('writingSoundsToggle').addEventListener('change', toggle
 document.getElementById('startButton').addEventListener('click', startTimer);
 document.getElementById('pauseButton').addEventListener('click', pauseTimer);
 document.getElementById('resetButton').addEventListener('click', resetTimer);
+
 
 // Initial display
 updateTimerDisplay();

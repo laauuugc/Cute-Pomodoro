@@ -83,7 +83,7 @@ button:hover {
     top: 0;
     right: 0;
     height: 100%;
-    width: 100px;
+    width: 120px;
     background-color: #f5d8c5; /* Soft background color */
     padding: 20px;
     box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1); /* Soft shadow */
