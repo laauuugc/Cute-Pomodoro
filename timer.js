@@ -1,6 +1,7 @@
 let timer;
 let timeLeft = 25 * 60; // 25 minutes in seconds
 let isRunning = false;
+let isStudyPeriod = true; // Track if it's a study or break period
 
 function startTimer() {
     if (!isRunning) {
@@ -17,9 +18,9 @@ function pauseTimer() {
 function resetTimer() {
     clearInterval(timer);
     isRunning = false;
+    isStudyPeriod = true; // Reset to study period
     // Set the time based on selected options
     const studyTimeSelect = document.getElementById('studyTime');
-    const breakTimeSelect = document.getElementById('breakTime');
     timeLeft = parseInt(studyTimeSelect.value) * 60;
     updateTimerDisplay();
 }
@@ -32,6 +33,7 @@ function updateTimer() {
         clearInterval(timer);
         isRunning = false;
         playAlarm(); // Play alarm sound
+        togglePeriod(); // Switch between study and break periods
         // You can also add additional actions here, such as showing a notification
     }
 }
@@ -46,6 +48,21 @@ function playAlarm() {
     // Create an audio element and play the alarm sound
     const audio = new Audio('alarm.mp3');
     audio.play();
+}
+
+function togglePeriod() {
+    isStudyPeriod = !isStudyPeriod; // Toggle the period
+    const studyTimeSelect = document.getElementById('studyTime');
+    const breakTimeSelect = document.getElementById('breakTime');
+    
+    // Set the timeLeft to the appropriate period
+    timeLeft = isStudyPeriod
+        ? parseInt(studyTimeSelect.value) * 60
+        : parseInt(breakTimeSelect.value) * 60;
+
+    // Update timer display and restart the timer automatically
+    updateTimerDisplay();
+    startTimer();
 }
 
 // Function to change background image
