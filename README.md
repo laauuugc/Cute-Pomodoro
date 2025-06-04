@@ -40,7 +40,7 @@
 - **Mobile optimization** with PWA capabilities
 - **Cross-platform testing** on 15+ device configurations
 
-## 📊 User Experience Metrics
+## User Experience Metrics
 
 Based on 30-day user testing with 20+ participants:
 
@@ -50,7 +50,7 @@ Based on 30-day user testing with 20+ participants:
 - **Accessibility compliance**: WCAG 2.1 AAA rating
 - **User satisfaction**: 4.7/5.0 average rating
 
-## 🛠️ Installation & Setup
+## Installation & Setup
 
 ### Quick Start
 ```bash
