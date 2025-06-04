@@ -42,6 +42,13 @@ function updateTimerDisplay() {
     const minutes = Math.floor(timeLeft / 60);
     const seconds = timeLeft % 60;
     document.getElementById('timer').innerText = `${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
+    
+    // Update period indicator
+    const periodIndicator = document.getElementById('periodIndicator');
+    if (periodIndicator) {
+        periodIndicator.textContent = isStudyPeriod ? 'Study Time' : 'Break Time';
+        periodIndicator.className = isStudyPeriod ? 'study-period' : 'break-period';
+    }
 }
 
 function playAlarm() {
@@ -63,6 +70,16 @@ function togglePeriod() {
     // Update timer display and restart the timer automatically
     updateTimerDisplay();
     startTimer();
+    
+    // Show a notification
+    const notification = document.getElementById('notification');
+    if (notification) {
+        notification.textContent = isStudyPeriod ? 'Break is over! Time to study!' : 'Study session complete! Take a break!';
+        notification.style.display = 'block';
+        setTimeout(() => {
+            notification.style.display = 'none';
+        }, 3000);
+    }
 }
 // Function to change background image
 function changeBackground(imageUrl) {
